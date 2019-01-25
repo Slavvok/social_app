@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block content %}
+    <div class="card mx-auto mt-2" style="max-width: 300px">
+      <div class="card-body">
+        <h5 class="card-title"><span class="badge badge-primary">Friends</span></h5>
+        <table class="table table-borderless">
+          <tbody>
+            {% for item in info %}
+            <tr>
+              <td>
+                <a class="">{{ item.first_name }}</a>
+              </td>
+              <td>
+                <a href="https://vk.com/id{{item.id}}">
+                  <img src="{{ item.photo_50 }}">
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% endblock %}

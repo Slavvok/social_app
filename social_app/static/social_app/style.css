@@ -1,0 +1,6 @@
+.table-borderless > tbody > tr > td {
+  border: none;
+  width: 50%;
+  text-align: center;
+
+}

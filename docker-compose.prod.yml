@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+  social_app:
+    restart: always
