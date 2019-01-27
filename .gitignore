@@ -1,2 +1,4 @@
 db.sqlite3
-venv
+venv/
+main/__pycache__/
+social_app/__pycache__/
