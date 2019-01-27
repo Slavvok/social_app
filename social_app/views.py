@@ -30,5 +30,11 @@ def get_info(request):
     return render(request, 'info.html', context, )
 
 
+def handler404(request, *args, **kwargs):
+    response = render_to_response("404.html")
+    response.status_code = 404
+    return reponse
+
+
 def logout(request):
     auth_logout(request)

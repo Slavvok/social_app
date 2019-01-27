@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6i+c=l!n1yb8&!eb666geany-h*d&hv2#s6ji0vh!0y*76qa&z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -120,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'social_app/static'),
@@ -129,7 +129,14 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 LOGIN_URL = '/'
-
+# LOCAL
+SOCIAL_AUTH_VK_OAUTH2_KEY = 6829793
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'lrnrz8CGmWVeporQLVEq'
+'''
+# PRODUCTION
+SOCIAL_AUTH_VK_OAUTH2_KEY = 6822144
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'hnaH90LmQ8AQQVO00PcB'
+'''
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.vk.VKOAuth2',
     'django.contrib.auth.backends.ModelBackend',
@@ -137,8 +144,6 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
-SOCIAL_AUTH_VK_OAUTH2_KEY = 6822144
-SOCIAL_AUTH_VK_OAUTH2_SECRET = 'hnaH90LmQ8AQQVO00PcB'
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['friends']
 
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
