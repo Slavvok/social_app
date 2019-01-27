@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponseNotFound
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
@@ -28,6 +28,12 @@ def get_info(request):
         info = random.sample(r.json()['response']['items'], k=number)
         context = {'info': info}
     return render(request, 'info.html', context, )
+
+
+def handler404(request):
+    respnse = render(request, '404.html')
+    response.status = 404
+    return response
 
 
 def logout(request):

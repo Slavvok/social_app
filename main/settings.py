@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6i+c=l!n1yb8&!eb666geany-h*d&hv2#s6ji0vh!0y*76qa&z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -137,8 +137,17 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
+
+# LOCAL
+SOCIAL_AUTH_VK_OAUTH2_KEY = 6829793
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'lrnrz8CGmWVeporQLVEq'
+
+'''
+# PRODUCTION
 SOCIAL_AUTH_VK_OAUTH2_KEY = 6822144
 SOCIAL_AUTH_VK_OAUTH2_SECRET = 'hnaH90LmQ8AQQVO00PcB'
+'''
+
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['friends']
 
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = False
