@@ -128,6 +128,10 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+
 LOGIN_URL = '/'
 # LOCAL
 SOCIAL_AUTH_VK_OAUTH2_KEY = 6829793
